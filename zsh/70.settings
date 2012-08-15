@@ -1,0 +1,25 @@
+#-*- mode: shell-script -*-
+
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt share_history
+setopt append_history
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+setopt hist_ignore_space
+setopt hist_no_store
+setopt hist_verify
+
+setopt no_beep
+setopt auto_cd
+setopt pushd_minus
+setopt pushd_ignore_dups
+setopt no_flow_control
+
+# emacs like sub word mode
+WORDCHARS=""
+autoload -Uz select-word-style
+select-word-style normal
+zstyle ':zle:*' word-style subword

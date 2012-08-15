@@ -1,0 +1,64 @@
+xft.dpi:                96
+Xft.hintstyle:          hintfull
+Xft.lcdfilter:          lcddefault
+xft.autohinting:        1
+xft.antialias:          1
+xft.rgba:               rgba
+!Xft.embolden:          true
+Xcursor*theme:          Vanilla-DMZ-AA
+Xcursor.size:           22
+
+!urxvt*font:             -*-droid sans mono-*-r-*-*-11-*-*-*-*-*-iso8859-*
+!urxvt*boldFont:         -*-droid sans mono-*-r-*-*-11-*-*-*-*-*-iso8859-*
+urxvt*font:             xft:Droid Sans Mono:pixelsize=11
+urxvt*geometry:         101x21
+urxvt*saveLines:        2048
+urxvt*scrollBar:        false
+urxvt*scrollstyle:      plain   ! options: rxvt, plain, next or xterm. plain
+!urxvt*depth:           32
+!urxvt*background:      rgba:0000/0000/0000/dede
+!urxvt*foreground:      rgba:cccc/cccc/cccc/cdcd
+!urxvt*borderColor:     rgba:0000/0000/0000/cccc
+urxvt*borderless:       true
+!urxvt*tintColor:        #222222
+urxvt*cutchars:         "()*,<>[]{}|'"
+urxvt*print-pipe:       cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
+urxvt*secondaryScroll:  false
+urxvt*mapAlert:         true
+urxvt*utmpInhibit:      true
+urxvt*perl-lib:         /usr/lib/urxvt/perl/
+urxvt*matcher*button:   1
+urxvt*perl-ext-common:  default,matcher,clipboard
+urxvt*urlLauncher:      firefox
+urxvt*urgentOnBell:     true
+urxvt*termName:         rxvt-256color
+urxvt*cursorBlink:      true
+
+xterm*geometry:         110x27
+xterm*faceName:         Profont:pixelsize=14
+xterm*background:       rgb:0000/0000/0000
+xterm*foreground:       rgb:cccc/cccc/cccc
+xterm*utf8:             2
+xterm*eightBitInput:    true
+xterm*saveLines:        32767
+xterm*scrollBar:        false
+xterm*toolBar:          false
+
+xclock*mode:            digital
+xclock*update:          1
+
+!emacs.fontbackend:     xft
+emacs.font:             -*-droid sans mono-*-*-*-13-*-*-*-*-*-iso8859-*
+!emacs.font:            -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso8859-*
+emacs.background:        #000000
+emacs.foreground:        #ffffff
+emacs.cursorColor:       #ffffff
+emacs.geometry:          100x32
+emacs.menuBar:           off
+emacs.toolBar:           0
+emacs.verticalScrollBars:off
+
+*foreground: #CDCDCD
+*background: #121212
+
+#include "/home/sujoy/.colors/defaultcolors"

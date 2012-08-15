@@ -1,0 +1,14 @@
+#-*- mode: shell-script -*-
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias rm="rm -v"
+alias cp="cp -v"
+alias mv="mv -v"
+alias fehc="feh -rxdqlg 640x480 "
+alias pacman="sudo pacman"
+alias torlist='grep -ao -HP "http://[^/]*/"'
+alias du="du -hs"
+alias df="df -h"
+alias man="TERMINFO=~/.terminfo/ LESS=C TERM=mostlike PAGER=less man"
+

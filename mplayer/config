@@ -1,0 +1,41 @@
+#audio
+volstep=1               # step size of mixer volume changes in %
+mixer-channel="Master"  # set the volume mixer channel
+
+#subtitles
+ass=yes
+ass-font-scale=1.0
+
+ass-color=ffff0000      # set the subtitle color, yellow is nice :)
+
+double=yes              # double buffering (recommended for subtitles)
+subfont-text-scale=3.0  # ttf scaling autoscale coefficient. (default: 5)
+
+sub-fuzziness=1         # load all subs containing movie name
+
+ffactor=10              # sub outline size (1: narrow black outline)
+
+font='liberation mono'  # set the font, ttf looks great
+embeddedfonts=yes       # use embedded fonts
+subfont-osd-scale=2.0   # osd autoscale coefficient. (default: 6)
+
+unicode=yes             # subtitle file encoding.
+utf8=yes                # subtitle file encoding.
+
+#appearance
+stop-xscreensaver=yes   # disable screensaver.
+geometry=50%:50%        # position window. (50%:50%: center of screen)
+ontop=1                 # always keep mplayer on top
+
+#languages
+slang=en,eng,english    # subtitles language priorities
+alang=en,eng,english    # audio language priorities
+
+
+# video
+vo=xv                   # video out method
+zoom=yes                # sofware scaling
+sid=0                   # subtitle set
+double=yes              # double buffering (recommended for subtitles)
+monitoraspect=16:9      # 16:9 or or 4:3
+hardframedrop=0         # toggle hard frame drop
