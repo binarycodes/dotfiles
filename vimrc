@@ -83,11 +83,6 @@ if has("autocmd")
 endif "has("autocmd")
 
 
-" database settings {{{1
-" MySQL
-let g:dbext_default_profile_mysql_local = 'type=MYSQL:user=sujoy:passwd=mandriva'
-let g:dbext_default_history_file = '~/.vim/dbext_history'
-
 if has('gui_running')
     set guioptions-=m  "remove menu bar
     set guioptions-=T  "remove toolbar

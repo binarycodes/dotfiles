@@ -55,3 +55,8 @@ swap () {
     fi
     local TMPFILE=$(mktemp) ; mv "$1" "$TMPFILE" ; mv "$2" "$1" ; mv "$TMPFILE" "$2"
 }
+
+# nicely formatted mount
+nmount() {
+    (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2=$4="";1') | column -t ;
+}
