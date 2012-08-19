@@ -1,6 +1,6 @@
 ####################################################
 ## sujoy@archlinux.us
-## Largely Inspire By cookiemonster
+## Largely Inspired By cookiemonster
 ####################################################
 
 # Playlist
@@ -55,7 +55,7 @@ allow_physical_directories_deletion = "no"
 
 
 # Settings
-mpd_music_dir = "/home/sujoy/music"
+mpd_music_dir = "~/music"
 external_editor = "vim"
 use_console_editor = "yes"
-lyrics_directory = "/home/sujoy/.lyrics/"
+lyrics_directory = "~/.lyrics/"
