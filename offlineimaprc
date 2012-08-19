@@ -1,3 +1,4 @@
+# -*- mode: conf -*-
 ##################################################
 # General definitions
 ##################################################
@@ -160,7 +161,7 @@ remoterepository = GMailRemote
 # in this case a call to imapfilter to filter mail before the sync process
 # starts and a custom shell script after the sync completes.
 # The pre sync script has to complete before a sync to the account will
-# start. 
+# start.
 
 # presynchook = imapfilter
 # postsynchook = notifysync.sh
@@ -188,7 +189,7 @@ remoterepository = GMailRemote
 # not be changed, they will not be deleted etc.  For offlineimap it will be like these
 # messages do not exist.  This will perform an IMAP search in the case of IMAP or Gmail
 # and therefor requires that the server support server side searching.  This will
-# calculate the earliest day that would be included in the search and include all 
+# calculate the earliest day that would be included in the search and include all
 # messages from that day until today.   e.g. maxage = 3 to sync only the last 3 days mail
 
 maxage = 1000
@@ -204,13 +205,14 @@ maxage = 1000
 type = IMAP
 remotehost = localhost
 port = 143
-remoteuser = sujoy
-remotepass = mandriva
+remoteusereval = get_authinfo_login("localhost")
+remotepasseval = get_authinfo_password("localhost")
+
 # Specify local repository.  Your IMAP folders will be synchronized
 # to maildirs created under this path.  OfflineIMAP will create the
 # maildirs for you as needed.
 
-# localfolders = ~/.mail/GMailMain 
+# localfolders = ~/.mail/GMailMain
 
 # You can specify the "path separator character" used for your Maildir
 # folders.  This is inserted in-between the components of the tree.
@@ -265,7 +267,7 @@ type = Gmail
 # remoteport = 993
 
 # Specify the remote user name.
-remoteusereval = get_authinfo_login("imap.gmail.com", 1)
+remoteusereval = get_authinfo_login("imap.gmail.com")
 
 # There are five ways to give the password for the remote IMAP
 # server:
@@ -273,13 +275,13 @@ remoteusereval = get_authinfo_login("imap.gmail.com", 1)
 # 1. No password at all specified in the config file. If a matching entry is
 #    found in ~/.netrc (see netrc (5) for information) the password from the
 #    matching entry will be used. If there is no ~/.netrc file but there is an
-#    /etc/netrc file, the password will instead be taken from there. Otherwise 
+#    /etc/netrc file, the password will instead be taken from there. Otherwise
 #    you will be prompted for the password when OfflineIMAP starts.
 #
 # 2. The remote password stored in this file with the remotepass
 #    option. Example:
 #
-remotepasseval = get_authinfo_password("imap.gmail.com", 1)
+remotepasseval = get_authinfo_password("imap.gmail.com")
 #
 # 3. The remote password stored as a single line in an external
 #    file, which is referenced by the remotefile option.  Example:
