@@ -22,7 +22,7 @@ urxvt*scrollstyle:      plain   ! options: rxvt, plain, next or xterm. plain
 urxvt*borderless:       true
 !urxvt*tintColor:        #222222
 urxvt*cutchars:         "()*,<>[]{}|'"
-urxvt*print-pipe:       cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
+urxvt*print-pipe:       cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
 urxvt*secondaryScroll:  false
 urxvt*mapAlert:         true
 urxvt*utmpInhibit:      true
@@ -61,4 +61,5 @@ emacs.verticalScrollBars:off
 *foreground: #CDCDCD
 *background: #121212
 
-#include "/home/sujoy/.colors/defaultcolors"
+! need to start xrdb with -I$HOME for this to work
+#include ".colors/defaultcolors"

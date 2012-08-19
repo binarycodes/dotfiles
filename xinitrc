@@ -1,6 +1,6 @@
 /usr/bin/numlockx &
-/usr/bin/xrdb -load ~/.Xresources &
-#/usr/bin/xmodmap /home/sujoy/.xmodmaprc
+/usr/bin/xrdb -I$HOME -load ${HOME}/.Xresources &
+#/usr/bin/xmodmap ${HOME}/.xmodmaprc
 /usr/bin/xbindkeys &
 #/usr/bin/urxvtd -q -f -o &
 #eval $(cat $HOME/.fehbg)
@@ -75,7 +75,7 @@ case $SESSION in
         ;;
     gnome)
         exec ck-launch-session gnome-session
-        ;;  
+        ;;
 esac
 
 exit
