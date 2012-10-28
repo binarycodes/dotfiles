@@ -85,10 +85,10 @@
    m:0x0 + c:107
 "gmrun"
    m:0x8 + c:68
-# "urxvtc"
-#    m:0x40 + c:36
-"termite"
-   m:0x40 + c:36
+ "urxvtc"
+    m:0x40 + c:36
+#"termite"
+   #m:0x40 + c:36
 "firefox"
    m:0x40 + c:41
 "pidgin"
