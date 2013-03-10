@@ -5,6 +5,7 @@
 /usr/bin/urxvtd -q -f -o &
 #eval $(cat $HOME/.fehbg)
 nitrogen --restore &
+firefox &
 
 # default to XMonad if no arguments given
 SESSION="xmonad"
