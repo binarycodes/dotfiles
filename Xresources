@@ -62,6 +62,5 @@ emacs.verticalScrollBars:off
 
 
 ! need to start xrdb with -I$HOME for this to work
-#include ".colors/jellybeans"
+#include ".colors/everycolorschemeivefound/w0ng"
 
-*background: #000000
