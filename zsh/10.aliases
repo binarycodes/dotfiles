@@ -1,6 +1,6 @@
 #-*- mode: shell-script -*-
 
-alias ls='ls --color=auto'
+alias ls='ls++'
 alias grep='grep --color=auto'
 alias rm="rm -v"
 alias cp="cp -v"
@@ -11,4 +11,4 @@ alias torlist='grep -ao -HP "http://[^/]*/"'
 alias du="du -hs"
 alias df="df -h"
 alias man="TERMINFO=~/.terminfo/ LESS=C TERM=mostlike PAGER=less man"
-
+alias powerpill="sudo powerpill"

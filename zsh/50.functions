@@ -36,9 +36,9 @@ ec() {
 
 search() {
     if [ $2 ]; then
-        find ./ -maxdepth $2 -type f -name "*$1*"
+        find ./ -maxdepth $2 -type f -iname "*$1*"
     else
-        find ./ -type f -name "*$1*"
+        find ./ -type f -iname "*$1*"
     fi
 }
 
