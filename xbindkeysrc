@@ -66,9 +66,9 @@
 #  Control + b:2 + Release
 
 "amixer sset Master 1%+"
-   Control+Mod2+F12
+   Control+F12
 "amixer sset Master 1%-"
-   Control+Mod2+F11
+   Control+F11
 "mpc next"
    m:0x0 + c:171
 "mpc prev"
@@ -87,8 +87,6 @@
    m:0x8 + c:68
  "urxvtc"
     m:0x40 + c:36
-#"termite"
-   #m:0x40 + c:36
 "firefox"
    m:0x40 + c:41
 "pidgin"
