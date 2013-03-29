@@ -35,11 +35,12 @@ ec() {
 
 
 search() {
-    if [ $2 ]; then
-        find ./ -maxdepth $2 -type f -iname "*$1*"
-    else
-        find ./ -type f -iname "*$1*"
+    local maxLevel=3;
+    if [[ -n $2 ]]; then
+        maxLevel=$2;
     fi
+
+    find ./ -maxdepth $maxLevel -iname "*$1*"
 }
 
 # swap 2 filenames around
