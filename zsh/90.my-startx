@@ -1,5 +1,5 @@
 #-*- mode: shell-script -*-
 
 if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]]; then
-    exec startx &! ; exit
+    exec startx &!; logout
 fi

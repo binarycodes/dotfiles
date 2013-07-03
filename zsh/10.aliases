@@ -1,12 +1,12 @@
 #-*- mode: shell-script -*-
 
-alias ls='ls++'
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias rm="rm -v"
 alias cp="cp -v"
 alias mv="mv -v"
 alias fehc="feh -rxdqlg 640x480 "
-alias pacman="sudo pacman"
+alias pacman="sudo pacman --color auto"
 alias torlist='grep -ao -HP "http://[^/]*/"'
 alias du="du -hs"
 alias df="df -h"
