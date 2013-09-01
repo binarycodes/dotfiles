@@ -61,3 +61,14 @@ swap () {
 nmount() {
     (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2=$4="";1') | column -t ;
 }
+
+calc() {
+    local arg scale=3 ;
+    while getopts s: arg ; do
+        case $arg in
+            s) scale=$OPTARG;
+        esac
+    done
+    shift $((OPTIND-1))
+    echo "scale=$scale;$@" | bc -l
+}
