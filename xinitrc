@@ -15,6 +15,9 @@ if [[ $1 ]]; then
 fi
 
 case $SESSION in
+    bspwm)
+        exec bspwm
+        ;;
     xfce)
         /usr/bin/numlockx off&
         exec ck-launch-session startxfce4
