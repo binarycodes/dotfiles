@@ -19,8 +19,8 @@ font='liberation mono'  # set the font, ttf looks great
 embeddedfonts=yes       # use embedded fonts
 subfont-osd-scale=2.0   # osd autoscale coefficient. (default: 6)
 
-unicode=yes             # subtitle file encoding.
-utf8=yes                # subtitle file encoding.
+subfont-encoding=unicode    # subtitle file encoding.
+#utf8=yes                    # subtitle file encoding.
 
 #appearance
 stop-xscreensaver=yes   # disable screensaver.
@@ -39,3 +39,5 @@ sid=0                   # subtitle set
 double=yes              # double buffering (recommended for subtitles)
 monitoraspect=16:9      # 16:9 or or 4:3
 hardframedrop=0         # toggle hard frame drop
+lavdopts=threads=2
+aspect=16:9
