@@ -85,7 +85,7 @@
    m:0x0 + c:107
 "gmrun"
    m:0x8 + c:68
- "urxvtc"
+ "termite"
     m:0x40 + c:36
 "firefox"
    m:0x40 + c:41
@@ -99,6 +99,8 @@
    m:0x40 + c:26
 "gvim"
    Mod4 + v
+"chromium"
+   Mod4 + c
 ##################################
 # End of xbindkeys configuration #
 ##################################

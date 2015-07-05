@@ -1,0 +1,39 @@
+[options]
+resize_grip = false
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+visible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+font = Cousine Regen for Powerline 9
+cursor_blink = system
+cursor_shape = underline
+
+
+[colors]
+foreground = #cccccc
+foreground_bold = #ffffff
+background  = #000000
+cursor = #999999
+
+color0 = #666666
+color1 = #CC6699
+color2 = #99CC66
+color3 = #CC9966
+color4 = #6699CC
+color5 = #9966CC
+color6 = #66CC99
+color7 = #CCCCCC
+color8 = #999999
+color9 = #FF99CC
+color10 = #CCFF99
+color11 = #FFCC99
+color12 = #99CCFF
+color13 = #CC99FF
+color14 = #99FFCC
+color15 = #FFFFFF
+

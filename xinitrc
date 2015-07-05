@@ -3,8 +3,7 @@
 #/usr/bin/xmodmap ${HOME}/.xmodmaprc
 /usr/bin/xbindkeys &
 /usr/bin/urxvtd -q -f -o &
-#eval $(cat $HOME/.fehbg)
-nitrogen --restore &
+$HOME/.fehbg
 firefox &
 
 # default to XMonad if no arguments given

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+case "$1" in
+"C-r")
+        convert -rotate 90 "$2" "$2" ;;
+"C-c")
+        echo -n "$2" | xclip -selection clipboard ;;
+"C-w")
+        echo "feh  --bg-scale '${2}'" > ${HOME}/.fehbg
+esac
