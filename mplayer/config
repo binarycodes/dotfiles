@@ -2,6 +2,8 @@
 ao=alsa
 volstep=1               # step size of mixer volume changes in %
 mixer-channel="Master"  # set the volume mixer channel
+softvol=yes
+softvol-max=900
 
 #subtitles
 ass=yes

@@ -14,19 +14,36 @@ servers = (
     use_ssl = "yes";
     ssl_verify = "yes";
     autoconnect = "yes";
+  },
+  {
+    address = "efnet.xs4all.nl";
+    chatnet = "EFNet";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.underworld.no";
+    chatnet = "EFNet";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
   }
 );
 
 chatnets = {
   Bitlbee = { type = "IRC"; nick = "sujoy"; username = "Sujoy"; };
   Freenode = { type = "IRC"; };
+  EFNet = { type = "IRC"; nick = "binarycodes"; max_modes = "4"; };
 };
 
 channels = (
   { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#emacs"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#vim"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#xmonad"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#xmonad"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#motorcycles"; chatnet = "EFNet"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -200,7 +217,7 @@ statusbar = {
 settings = {
   core = {
     real_name = "Sujoy Kumar Das";
-    user_name = "sujoy";
+    user_name = "binarycodes";
     nick = "binarycodes";
     timestamp_format = "%H:%M:%S";
   };
@@ -236,3 +253,57 @@ ignores = (
   { level = "JOINS PARTS QUITS"; servertag = "Freenode"; }
 );
 logs = { };
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#archlinux";
+        tag = "Freenode";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#emacs";
+        tag = "Freenode";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#vim";
+        tag = "Freenode";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#xmonad";
+        tag = "Freenode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#motorcycles";
+        tag = "EFNet";
+      }
+    );
+  };
+};
+mainwindows = { 1 = { first_line = "1"; lines = "72"; }; };

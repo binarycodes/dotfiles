@@ -4,7 +4,7 @@
 /usr/bin/xbindkeys &
 /usr/bin/urxvtd -q -f -o &
 $HOME/.fehbg
-firefox &
+chromium &
 
 # default to XMonad if no arguments given
 SESSION="xmonad"
@@ -15,6 +15,7 @@ fi
 
 case $SESSION in
     bspwm)
+        sxhkd &
         exec bspwm
         ;;
     xfce)
