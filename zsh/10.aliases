@@ -6,7 +6,6 @@ alias grep='grep --color=auto'
 alias rm="rm -v"
 alias cp="cp -v"
 alias mv="mv -v"
-alias fehc="feh -rxdqlg 640x480 "
 alias pacman="sudo pacman --color auto"
 alias abs="sudo abs"
 alias torlist='grep -ao -HP "http://[^/]*/"'
