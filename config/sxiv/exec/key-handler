@@ -6,5 +6,8 @@ case "$1" in
 "C-c")
         echo -n "$2" | xclip -selection clipboard ;;
 "C-w")
-        echo "feh  --bg-scale '${2}'" > ${HOME}/.fehbg
+        while read file; do 
+         echo "setroot '-s' '${file}'" > ${HOME}/.config/setroot/.setroot-restore
+         setroot --restore
+        done;   
 esac

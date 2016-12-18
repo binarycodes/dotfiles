@@ -1,10 +1,20 @@
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+    for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
+fi
+
+
 /usr/bin/numlockx &
 /usr/bin/xrdb -I$HOME -load ${HOME}/.Xresources &
 #/usr/bin/xmodmap ${HOME}/.xmodmaprc
 /usr/bin/xbindkeys &
 /usr/bin/urxvtd -q -f -o &
-$HOME/.fehbg
+/home/sujoy/bin/alliance &
+setroot --restore &
 chromium &
+termite &
 
 # default to XMonad if no arguments given
 SESSION="xmonad"
@@ -22,21 +32,12 @@ case $SESSION in
         /usr/bin/numlockx off&
         exec ck-launch-session startxfce4
         ;;
-    wmfs)
-        exec wmfs
-        ;;
     dwm)
         exec dwm
         ;;
     i3)
         xsetroot -cursor_name left_ptr &
         exec i3
-        ;;
-    subtle)
-        exec subtle
-        ;;
-    musca)
-        exec musca
         ;;
     twm)
         exec twm
@@ -46,9 +47,6 @@ case $SESSION in
         ;;
     openbox)
         exec openbox
-        ;;
-    wmii)
-        exec wmii
         ;;
     xmonad)
         xsetroot -cursor_name left_ptr &
@@ -63,19 +61,6 @@ case $SESSION in
         ;;
     fluxbox)
         exec fluxbox
-        ;;
-    ratpoison)
-        xsetroot -cursor_name left_ptr &
-        exec ratpoison
-        ;;
-    scrot)
-        exec scrotwm
-        ;;
-    kde)
-        exec ck-launch-session startkde
-        ;;
-    notion)
-        exec notion
         ;;
     gnome)
         exec ck-launch-session gnome-session

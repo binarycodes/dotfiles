@@ -72,3 +72,8 @@ calc() {
     shift $((OPTIND-1))
     echo "scale=$scale;$@" | bc -l
 }
+
+subdownloader(){
+    local fullPath=$(realpath $1)
+    /usr/bin/subdownloader --cli --nerd --lang en --interactive --rename-subs --video $fullPath
+}
