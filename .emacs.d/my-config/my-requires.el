@@ -14,7 +14,7 @@
 (require 'my-magit)
 (require 'my-treemacs)
 
-
+(require 'my-autocompletions)
 (require 'my-c-mode)
 ; load at the ending after everything else has been defined
 (require 'my-keybindings)
