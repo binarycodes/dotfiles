@@ -2,18 +2,15 @@
 
 (provide 'my-general-settings)
 
-;; no dialogs please
-(setq use-dialog-box nil)
-
 (setopt use-short-answers t)
 
-;; Confirm before killing Emacs. If the result of the function
-;; call is non-nil, the session is killed, otherwise Emacs continues
-;; to run.
-(setq confirm-kill-emacs
-      (lambda (e)
-        (y-or-n-p-with-timeout
-         "Really exit Emacs? " 3 nil)))
+(setq use-dialog-box nil
+      initial-scratch-message ""
+      vc-follow-symlinks t
+      ;; Confirm before killing Emacs. If the result of the function
+      ;; call is non-nil, the session is killed, otherwise Emacs continues
+      ;; to run.
+      confirm-kill-emacs (lambda (e) (y-or-n-p-with-timeout "Really exit Emacs? " 3 nil)))
 
 ;; save history from previous sessions
 (setq savehist-file "~/.emacs.d/history/savehist")
@@ -115,3 +112,11 @@
 ;; and `consult'.
 (use-package embark-consult
   :ensure t)
+
+(use-package recentf
+  :ensure nil
+  :config
+  (setq recentf-auto-cleanup 'never
+        recentf-max-menu-items 0
+        recentf-max-saved-items 200)
+  (recentf-mode t))

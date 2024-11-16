@@ -29,7 +29,8 @@
 
 
 ;; flash the screen, when moving out of bounds, ex, pressing up when already at the first line.
-(setq visible-bell t)
+(setq visible-bell t
+      blink-cursor-interval 0.7)
 
 
 ;; fonts & theme

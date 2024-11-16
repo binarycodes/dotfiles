@@ -10,7 +10,10 @@
   :hook ((prog-mode . company-mode))
   :config
   (setq company-idle-delay 0.1
-        company-minimum-prefix-length 1))
+        company-minimum-prefix-length 2
+        company-tooltip-limit 14
+        company-require-match 'never
+        company-tooltip-align-annotations t))
 
 (use-package lsp-mode
   :ensure t
