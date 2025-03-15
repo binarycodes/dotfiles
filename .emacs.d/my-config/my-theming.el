@@ -34,7 +34,7 @@
 
 
 ;; fonts & theme
-(set-face-attribute 'default nil :font "JetBrains Mono" :height 130)
+(set-face-attribute 'default nil :font "JetBrains Mono" :height 160)
 (set-face-attribute 'default nil :family "MesloLGS NF")
 
 (use-package nezburn-theme
