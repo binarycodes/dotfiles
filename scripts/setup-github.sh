@@ -14,12 +14,12 @@ then
     gpg --quick-generate-key "$name <$email>" ed25519 sign 1y
 else
     printf "found key in gpg, setting up git now..."
-    git config --replace-all user.name "$name"
-    git config --replace-all user.email "$email"
-    git config user.signkey $key_id
-    git config core.sshCommand "ssh -i $ssh_file_path"
-    git config commit.gpgsign true
-    git config tag.gpgsign true
+    git config --global --replace-all user.name "$name"
+    git config --global --replace-all user.email "$email"
+    git config --global user.signkey $key_id
+    git config --global core.sshCommand "ssh -i $ssh_file_path"
+    git config --global commit.gpgsign true
+    git config --global tag.gpgsign true
 
     printf "done\n\n"
     printf "add the following key to git remote\n"
