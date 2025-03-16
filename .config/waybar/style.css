@@ -10,8 +10,9 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, JetBrains Mono;
-    font-size: 20px;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 *:hover {
@@ -20,7 +21,7 @@
 
 window#waybar {
     background-color: @matrix-bar-color;
-    border-bottom: 5px solid @matrix-border-color;
+    /* border-bottom: 5px solid @matrix-border-color; */
     color: @matrix-white-font-color;
     transition-property: background-color;
     transition-duration: .5s;
@@ -56,7 +57,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 10px 10px;
+    padding: 15px 10px;
     background-color: transparent;
     color: @matrix-workspace-button-color;
 }
@@ -102,7 +103,7 @@ button:hover {
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 10px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

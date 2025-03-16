@@ -2,15 +2,15 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 44,
-    "spacing": 0, // Gaps between modules (4px)
+    "height": 20,
+    "spacing": 10, // Gaps between modules (4px)
 
     "modules-left": [
         "hyprland/workspaces",
+        "hyprland/window"
     ],
 
 	"modules-center": [
-        "hyprland/window"
     ],
 
 	"modules-right": [
