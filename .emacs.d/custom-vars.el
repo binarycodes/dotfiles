@@ -4,7 +4,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(company company-mode which-key lsp-mode embark-consult embark orderless consult marginalia vertico zenburn-theme yaml-mode treemacs terraform-mode smex rainbow-delimiters nezburn-theme modus-themes magit ivy gruvbox-theme elisp-autofmt doom-modeline ansible-vault ample-theme)))
+   '(ample-theme ansible-vault company company-mode consult doom-modeline
+                 elisp-autofmt embark embark-consult gruvbox-theme ivy
+                 lsp-mode magit marginalia modus-themes nezburn-theme
+                 orderless poly-ansible rainbow-delimiters smex
+                 terraform-mode treemacs vertico which-key yaml-mode
+                 zenburn-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

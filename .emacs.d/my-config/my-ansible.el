@@ -6,6 +6,8 @@
   (when (ansible-vault--is-encrypted-vault-file)
     (ansible-vault-mode 1)))
 
+(use-package poly-ansible)
+
 (use-package ansible-vault
   :init (add-hook 'yaml-mode-hook 'ansible-vault-mode-maybe)
   :config (setq ansible-vault-password-file "~/.ansible/vault-password"))
