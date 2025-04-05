@@ -26,3 +26,6 @@
 (add-hook 'before-save-hook 'my-prog-nuke-trailing-whitespace)
 
 (electric-pair-mode t)
+
+
+(use-package tree-sitter)

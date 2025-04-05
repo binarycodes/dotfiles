@@ -24,3 +24,4 @@
 
 
 (add-hook 'c-mode-hook 'lsp-deferred)
+(add-hook 'go-mode-hook 'lsp-deferred)

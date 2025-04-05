@@ -5,10 +5,11 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(ample-theme ansible-vault company company-mode consult doom-modeline
-                 elisp-autofmt embark embark-consult gruvbox-theme ivy
-                 lsp-mode magit marginalia modus-themes nezburn-theme
-                 orderless poly-ansible rainbow-delimiters smex
-                 terraform-mode treemacs vertico which-key yaml-mode
+                 elisp-autofmt embark embark-consult go-mode
+                 gruvbox-theme ivy lsp-mode magit marginalia
+                 modus-themes nezburn-theme orderless poly-ansible
+                 rainbow-delimiters reformatter smex terraform-mode
+                 tree-sitter treemacs vertico which-key yaml-mode
                  zenburn-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

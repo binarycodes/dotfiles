@@ -18,3 +18,5 @@
 (require 'my-c-mode)
 ; load at the ending after everything else has been defined
 (require 'my-keybindings)
+
+(require 'my-go)
