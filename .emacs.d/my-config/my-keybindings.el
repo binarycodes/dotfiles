@@ -4,6 +4,7 @@
 (global-unset-key (kbd "C-z"))
 
 (global-set-key (kbd "<f12>") 'revert-buffer)
+(global-set-key (kbd "C-<f12>") #'my-kill-non-file-buffs)
 
 ;; ace-window (switch between windows and frames)
 (global-set-key (kbd "M-o") 'ace-window)
