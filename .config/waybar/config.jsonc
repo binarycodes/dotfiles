@@ -85,7 +85,7 @@
         "format-icons": ["", "", ""]
     },
     "network": {
-        "interface": "enp38s0",
+        "interface": "enp36s0f1",
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
