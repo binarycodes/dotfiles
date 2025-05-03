@@ -18,6 +18,13 @@
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
+
+  :hook (
+         (terraform-mode . lsp-deferred)
+         (c-mode . lsp-deferred)
+         (go-mode . lsp-deferred)
+         )
+
   :init (setq lsp-keymap-prefix "C-c l")
   :config
   (lsp-enable-which-key-integration t))
