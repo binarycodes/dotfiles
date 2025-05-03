@@ -38,9 +38,16 @@
 (set-face-attribute 'default nil :family "MesloLGS NF")
 
 (use-package nezburn-theme
+  ;;  :config
+  ;;  (mapc #'disable-theme custom-enabled-themes)
+  ;;  (load-theme 'nezburn :no-confirm)
+  )
+
+;;(load-theme 'modus-vivendi :no-confirm)
+(use-package nimbus-theme
   :config
-  (mapc #'disable-theme custom-enabled-themes)
-  (load-theme 'nezburn :no-confirm))
+  (load-theme 'nimbus :no-confirm)
+  )
 
 ;; set frame title to reflect buffer/filename and status of buffer
 (setq frame-title-format
