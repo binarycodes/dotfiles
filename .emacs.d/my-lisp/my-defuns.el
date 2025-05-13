@@ -30,3 +30,8 @@ convenience."
                (equal (get-buffer-process buffer) nil))
       (kill-buffer buffer)))
   (message "Killed some buffers!"))
+
+(defun my/download-url-to-file (url filename)
+  "Download the content of URL and save it to FILENAME."
+  (interactive "sURL: \nFSave to file: ")
+  (url-copy-file url filename t))

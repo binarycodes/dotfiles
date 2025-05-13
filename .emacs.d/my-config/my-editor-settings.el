@@ -19,8 +19,7 @@
 ;; require new line at the end
 (setq require-final-newline t)
 
-(use-package
-  elisp-autofmt
+(use-package elisp-autofmt
   :commands (elisp-autofmt-mode elisp-autofmt-buffer))
 
 (add-hook 'before-save-hook 'my-prog-nuke-trailing-whitespace)

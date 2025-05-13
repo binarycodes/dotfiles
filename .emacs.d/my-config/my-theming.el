@@ -32,18 +32,8 @@
 (setq visible-bell t
       blink-cursor-interval 0.7)
 
+;; theme
 
-;; fonts & theme
-(set-face-attribute 'default nil :font "JetBrains Mono" :height 160)
-(set-face-attribute 'default nil :family "MesloLGS NF")
-
-(use-package nezburn-theme
-  ;;  :config
-  ;;  (mapc #'disable-theme custom-enabled-themes)
-  ;;  (load-theme 'nezburn :no-confirm)
-  )
-
-;;(load-theme 'modus-vivendi :no-confirm)
 (use-package nimbus-theme
   :config
   (load-theme 'nimbus :no-confirm)
@@ -58,7 +48,28 @@
 
 (use-package doom-modeline
   :init (doom-modeline-mode 1)
-  :custom ((doom-modeline-height 15)))
+  :custom
+  ((doom-modeline-height 15)
+   (setq doom-modeline-icon t))
+  )
 
 (unless (member "Symbols Nerd Font Mono" (font-family-list))
   (nerd-icons-install-fonts t))
+
+
+;; set the fonts
+(defun efs/set-font-faces ()
+  (message "Setting faces!")
+  (set-face-attribute 'default nil :font "JetBrains Mono" :height 160)
+
+  ;; Set the fixed pitch face
+  (set-face-attribute 'fixed-pitch nil :font "JetBrains Mono" :height 160)
+
+  ;; Set the variable pitch face
+  (set-face-attribute 'variable-pitch nil :font "Cantarell" :height 160 :weight 'regular))
+
+(if (daemonp)
+    (add-hook 'server-after-make-frame-hook
+              (lambda ()
+                (efs/set-font-faces)))
+    (efs/set-font-faces))
