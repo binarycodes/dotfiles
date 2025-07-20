@@ -48,6 +48,7 @@ bindkey '^[w' kill-region
 
 # Aliases
 alias ls='ls --color'
+alias gitlog='git log --abbrev-commit --pretty=format:"%C(magenta)%h %C(red)% G? %Cgreen%ad (%>(15,trunc)%cr)  %Cblue%<(15,trunc)%an %Creset%s %Cred% gD% D" --date="format-local:%Y-%m-%d %H:%M:%S"'
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
