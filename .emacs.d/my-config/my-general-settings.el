@@ -131,3 +131,12 @@
           ("e" . wgrep-change-to-wgrep-mode)
           ("C-x C-q" . wgrep-change-to-wgrep-mode)
           ("C-c C-c" . wgrep-finish-edit)))
+
+(use-package vterm
+  :ensure t)
+
+(use-package hyperbole
+  :ensure t
+
+  :config
+  (hyperbole-mode t))

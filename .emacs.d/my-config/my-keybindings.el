@@ -12,4 +12,4 @@
 
 ;; treemacs
 (global-set-key (kbd "<f11>") 'treemacs-select-window)
-(global-set-key (kbd "C-<f11>") 'treemacs-select-directory)
+(global-set-key (kbd "C-<f11>") 'treemacs)
