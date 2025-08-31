@@ -1,0 +1,9 @@
+[Unit]
+Description = Auto Mount personal document storage volume
+
+[Automount]
+Where=/mnt/personal
+TimeoutIdleSec=30
+
+[Install]
+WantedBy=multi-user.target
