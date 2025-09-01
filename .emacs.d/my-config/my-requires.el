@@ -20,3 +20,4 @@
 (require 'my-keybindings)
 
 (require 'my-go)
+(require 'my-org)
