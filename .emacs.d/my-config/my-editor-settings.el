@@ -27,4 +27,9 @@
 (electric-pair-mode t)
 
 
+(use-package drag-stuff
+  :init
+  (drag-stuff-global-mode t)
+  (drag-stuff-define-keys))
+
 (use-package tree-sitter)
