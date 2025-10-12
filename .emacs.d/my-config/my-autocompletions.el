@@ -8,9 +8,10 @@
 (use-package company
   :ensure t
   :hook ((prog-mode . company-mode))
+  :bind (("C-c C-c" . company-complete))
   :config
   (setq company-idle-delay 0.1
-        company-minimum-prefix-length 2
+        company-minimum-prefix-length 1
         company-tooltip-limit 14
         company-require-match 'never
         company-tooltip-align-annotations t))
@@ -27,7 +28,8 @@
 
   :init (setq lsp-keymap-prefix "C-c l")
   :config
-  (lsp-enable-which-key-integration t))
+  (lsp-enable-which-key-integration t)
+  (add-to-list 'lsp-file-watch-ignored-directories "/mnt/personal/"))
 
 
 (add-hook 'c-mode-hook 'lsp-deferred)

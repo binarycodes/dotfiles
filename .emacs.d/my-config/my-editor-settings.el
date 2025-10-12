@@ -22,7 +22,7 @@
 (use-package elisp-autofmt
   :commands (elisp-autofmt-mode elisp-autofmt-buffer))
 
-(add-hook 'before-save-hook 'my-prog-nuke-trailing-whitespace)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (electric-pair-mode t)
 
@@ -33,3 +33,7 @@
   (drag-stuff-define-keys))
 
 (use-package tree-sitter)
+
+(use-package project
+  :init
+  (setq project-vc-extra-root-markers '("Cargo.toml" "pyproject.toml" "requirements.txt" "go.mod")))

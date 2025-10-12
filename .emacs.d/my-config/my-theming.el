@@ -16,6 +16,7 @@
 
 (column-number-mode 't) ; show column number in the modeline
 (global-display-line-numbers-mode t)
+(setq display-line-numbers-type 'relative)
 
 ;; disable line numbers for some modes
 (dolist (mode '(org-mode-hook
