@@ -2,7 +2,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 20,
+    "height": 10,
     "spacing": 10, // Gaps between modules (4px)
 
     "modules-left": [
@@ -29,16 +29,7 @@
          "disable-scroll": true,
          "all-outputs": true,
          "warp-on-scroll": false,
-         "format": "{name}: {icon}",
-         "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "9": "󱕵",
-             "urgent": "",
-             "focused": "",
-             "default": ""
-         }
+         "format": "{name}",
      },
 	"custom/lock":{
 		"tooltip": false,
@@ -94,7 +85,6 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -110,6 +100,6 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
     }
 }

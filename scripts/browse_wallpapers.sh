@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 shopt -s nullglob
-files=(~/pictures/wallpaper/*)
+files=(~/pictures/wallpaper/collected/*)
 
 # exit silently if no files
 [ ${#files[@]} -eq 0 ] && exit 0
