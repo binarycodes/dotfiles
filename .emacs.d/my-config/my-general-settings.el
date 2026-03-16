@@ -140,3 +140,5 @@
 
   :config
   (hyperbole-mode t))
+
+(use-package dockerfile-mode)
