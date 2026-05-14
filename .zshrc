@@ -100,9 +100,10 @@ claude() {
     workspace_abs="$(cd "$workspace" && pwd -P)" || return 1
     image="docker.io/binarycodes/claude-local:${stack}"
 
-    if [[ ! -f "/tmp/claude/claude.json" ]]; then
-        mkdir -p /tmp/claude
-        touch /tmp/claude/claude.json
+    local claude_home="$HOME/.local/share/claude"
+    if [[ ! -f "$claude_home/claude.json" ]]; then
+        mkdir -p $claude_home
+        touch $claude_home/claude.json
     fi
 
     cmd=(
@@ -111,7 +112,7 @@ claude() {
         -it
         --pull always
         -v claude_config:/home/agent/.claude
-        -v /tmp/claude/claude.json:/home/agent/.claude.json
+        -v "${claude_home}/claude.json:/home/agent/.claude.json"
         -v "${workspace_abs}:/workspace"
         -w /workspace
         --name "claude-${stack}-$(date +%s)"
