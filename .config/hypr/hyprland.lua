@@ -147,7 +147,6 @@ local mainMod = "SUPER"
 hl.bind(mainMod .. " + " .. "RETURN", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + " .. "C", hl.dsp.exec_cmd("google-chrome-stable"))
 hl.bind(mainMod .. " + " .. "Z", hl.dsp.exec_cmd("zen-browser"))
-hl.bind(mainMod .. " + " .. "V", hl.dsp.exec_cmd("vivaldi"))
 hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("emacsclient -c"))
 hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("rofi -show combi -modes combi -combi-modes window,drun,run -show-icons -matching fuzzy -theme ~/.config/rofi/tokyonight.rasi"))
 hl.bind(mainMod .. " + " .. "W", hl.dsp.exec_cmd("rofi -no-config -theme fullscreen-preview.rasi -show filebrowser -filebrowser-command 'awww img ' -filebrowser-directory ~/pictures/wallpaper -filebrowser-sorting-method mtime -selected-row 1 >/dev/null"))
@@ -165,8 +164,21 @@ hl.bind(mainMod .. " + " .. "J", hl.dsp.layout("togglesplit"))
 
 -- dwindle
 
-hl.bind(mainMod .. " + " .. "apostrophe", hl.dsp.exec_cmd("hyprctl keyword general:layout master"))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "apostrophe", hl.dsp.exec_cmd("hyprctl keyword general:layout dwindle"))
+hl.bind(mainMod .. " + " .. "apostrophe", function()
+    hl.config({
+        general = {
+            layout = "master"
+        },
+    })
+end)
+
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "apostrophe", function()
+    hl.config({
+        general = {
+            layout = "dwindle"
+        },
+    })
+end)
 
 -- move focus with mainmod + arrow keys
 
@@ -177,27 +189,27 @@ hl.bind(mainMod .. " + " .. "down", hl.dsp.focus({ direction = "down" }))
 
 -- switch workspaces with mainmod + [0-9]
 
-hl.bind(mainMod .. " + " .. 1, hl.dsp.focus({ workspace = 1 }))
-hl.bind(mainMod .. " + " .. 2, hl.dsp.focus({ workspace = 2 }))
-hl.bind(mainMod .. " + " .. 3, hl.dsp.focus({ workspace = 3 }))
-hl.bind(mainMod .. " + " .. 4, hl.dsp.focus({ workspace = 4 }))
-hl.bind(mainMod .. " + " .. 5, hl.dsp.focus({ workspace = 5 }))
-hl.bind(mainMod .. " + " .. 6, hl.dsp.focus({ workspace = 6 }))
-hl.bind(mainMod .. " + " .. 7, hl.dsp.focus({ workspace = 7 }))
-hl.bind(mainMod .. " + " .. 8, hl.dsp.focus({ workspace = 8 }))
-hl.bind(mainMod .. " + " .. 9, hl.dsp.focus({ workspace = 9 }))
+hl.bind(mainMod .. " + " .. 1, hl.dsp.focus({ workspace = "1" }))
+hl.bind(mainMod .. " + " .. 2, hl.dsp.focus({ workspace = "2" }))
+hl.bind(mainMod .. " + " .. 3, hl.dsp.focus({ workspace = "3" }))
+hl.bind(mainMod .. " + " .. 4, hl.dsp.focus({ workspace = "4" }))
+hl.bind(mainMod .. " + " .. 5, hl.dsp.focus({ workspace = "5" }))
+hl.bind(mainMod .. " + " .. 6, hl.dsp.focus({ workspace = "6" }))
+hl.bind(mainMod .. " + " .. 7, hl.dsp.focus({ workspace = "7" }))
+hl.bind(mainMod .. " + " .. 8, hl.dsp.focus({ workspace = "8" }))
+hl.bind(mainMod .. " + " .. 9, hl.dsp.focus({ workspace = "9" }))
 
 -- move active window to a workspace with mainmod + shift + [0-9]
 
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 1, hl.dsp.window.move({ workspace = 1 }))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 2, hl.dsp.window.move({ workspace = 2 }))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 3, hl.dsp.window.move({ workspace = 3 }))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 4, hl.dsp.window.move({ workspace = 4 }))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 5, hl.dsp.window.move({ workspace = 5 }))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 6, hl.dsp.window.move({ workspace = 6 }))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 7, hl.dsp.window.move({ workspace = 7 }))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 8, hl.dsp.window.move({ workspace = 8 }))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 9, hl.dsp.window.move({ workspace = 9 }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 1, hl.dsp.window.move({ workspace = "1" }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 2, hl.dsp.window.move({ workspace = "2" }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 3, hl.dsp.window.move({ workspace = "3" }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 4, hl.dsp.window.move({ workspace = "4" }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 5, hl.dsp.window.move({ workspace = "5" }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 6, hl.dsp.window.move({ workspace = "6" }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 7, hl.dsp.window.move({ workspace = "7" }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 8, hl.dsp.window.move({ workspace = "8" }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. 9, hl.dsp.window.move({ workspace = "9" }))
 
 -- swap
 
@@ -262,27 +274,10 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name  = "workspace_2",
     match = {
-        class = "google-chrome",
+        class = "^(google-chrome|vivaldi-stable|zen)$",
     },
-    workspace = 2,
-})
-
-hl.window_rule({
-    name  = "workspace_2",
-    match = {
-        class = "zen",
-    },
-    workspace = 2,
-})
-
-hl.window_rule({
-    name  = "workspace_2",
-    match = {
-        class = "vivaldi-stable",
-    },
-    workspace = 2,
+    workspace = "2",
 })
 
 hl.window_rule({
@@ -295,35 +290,31 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name  = "workspace_3",
     match = {
         class = "Emacs",
     },
-    workspace = 3,
+    workspace = "3",
 })
 
 hl.window_rule({
-    name  = "workspace_4",
     match = {
         class = "jetbrains-idea-ce",
     },
-    workspace = 4,
+    workspace = "4",
 })
 
 hl.window_rule({
-    name  = "workspace_5",
     match = {
         class = "steam",
     },
-    workspace = 5,
+    workspace = "5",
 })
 
 hl.window_rule({
-    name  = "workspace_9",
     match = {
         class = "Bitwarden",
     },
-    workspace = 9,
+    workspace = "9",
 })
 
 -- Autostart
