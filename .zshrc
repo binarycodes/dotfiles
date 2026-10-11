@@ -5,10 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#if [ "$(tty)" = "/dev/tty1" ];then
-#  exec Hyprland
-#fi
-
 export EDITOR=vim
 
 # Set the directory we want to store zinit and plugins
@@ -81,44 +77,14 @@ if [ ! -f "$SSH_AUTH_SOCK" ]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
-claude() {
-    local stack="${1}"
-    local workspace="${2}"
 
-    # read two args, the rest are forwarded to the docker container
-    shift 2
+export AGENT_CONFIG_REPO=https://github.com/binarycodes/agent-config.git
 
-    local workspace_abs
-    local image
-    local -a cmd
+for file in ~/.config/zsh/functions/*.sh(N); do
+    source "${file}"
+done
 
-    if [[ ! -d "$workspace" ]]; then
-        printf 'error: workspace must be an existing directory: %s\n' "$workspace" >&2
-        return 1
-    fi
-
-    workspace_abs="$(cd "$workspace" && pwd -P)" || return 1
-    image="docker.io/binarycodes/claude-local:${stack}"
-
-    local claude_home="$HOME/.local/share/claude"
-    if [[ ! -f "$claude_home/claude.json" ]]; then
-        mkdir -p $claude_home
-        touch $claude_home/claude.json
-    fi
-
-    cmd=(
-        docker run
-        --rm
-        -it
-        --pull always
-        -v claude_config:/home/agent/.claude
-        -v "${claude_home}/claude.json:/home/agent/.claude.json"
-        -v "${workspace_abs}:/workspace"
-        -w /workspace
-        --name "claude-${stack}-$(date +%s)"
-        "$image"
-        "$@" # forward extra args
-    )
-
-    "${cmd[@]}"
+immich-cli() {
+    local upload_path="${1}"
+    $HOME/immich/node_modules/@immich/cli/bin/immich upload --recursive "${upload_path}"
 }
